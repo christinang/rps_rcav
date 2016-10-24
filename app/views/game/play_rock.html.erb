@@ -1,0 +1,58 @@
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-12"><hr>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-offset-3 col-sm-2"><a class = "btn btn-primary btn-block" href = "/rock" role = "button">Play Rock</a></div>
+    <div class="col-sm-2"><a class = "btn btn-info btn-block" href = "/paper" role = "button">Play Paper</a></div>
+    <div class="col-sm-2"><a class = "btn btn-primary btn-block" href = "/scissors" role = "button">Play Scissors</a></div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12"><hr>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-offset-3 col-md-3"><h3><span class = "label label-default">Rock</span></h3></div>
+    <div class="col-md-3">
+      <% if @computer_move == "rock" %>
+      <h3><span class = "label label-default">Rock</span></h3>
+      <% elsif @computer_move == "paper" %>
+      <h3><span class = "label label-default">Paper</span></h3>
+      <% elsif @computer_move == "scissors" %>
+      <h3><span class = "label label-default">Scissors</span></h3>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-offset-3 col-md-3"><img src = "assets/images/rock.png" width = "250" style = "border:1px solid black;"></div>
+    <div class="col-md-3">
+      <% if @computer_move == "rock" %>
+      <img src = "assets/images/rock.png" width = "250" style = "border:1px solid black;">
+      <% elsif @computer_move == "paper" %>
+      <img src = "assets/images/paper.png" width = "250" style = "border:1px solid black;">
+      <% elsif @computer_move == "scissors" %>
+      <img src = "assets/images/scissors.png" width = "250" style = "border:1px solid black;">
+      <% end %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-offset-5 col-sm-2">
+      <% if @result == "win" %>
+      <h3><span class = "label label-success">You win!</span></h3>
+      <% elsif @result == "tied" %>
+      <h3><span class = "label label-warning">You tied!</span></h3>
+      <% elsif @result == "lose" %>
+      <h3><span class = "label label-danger">You lose!</span></h3>
+      <% end %>
+
+    </div>
+  </div>
+
+</div>
